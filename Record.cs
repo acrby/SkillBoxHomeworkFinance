@@ -12,7 +12,7 @@ namespace SkillBoxHomeworkFinance
         public int Income { get; set; }
         public int Consumption { get; set; }
         public int Profit { get; set; }
-        public bool BadMontn { get; set; }
+        public bool BadMonth { get; set; }
 
         public Record(int Month, int Income, int Consumption, int Profit, bool BadMonth)
         {
@@ -20,7 +20,7 @@ namespace SkillBoxHomeworkFinance
             this.Income = Income;
             this.Consumption = Consumption;
             this.Profit = Profit;
-            this.BadMontn = BadMonth;
+            this.BadMonth = BadMonth;
         }
 
         public Record(int Month, int Income, int Consumption) : this(Month, Income, Consumption, 0, false)
@@ -32,7 +32,7 @@ namespace SkillBoxHomeworkFinance
             if (marksBadMonthes)
             {
 
-                if (this.BadMontn == true)
+                if (this.BadMonth == true)
                 {
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.ForegroundColor = ConsoleColor.White;

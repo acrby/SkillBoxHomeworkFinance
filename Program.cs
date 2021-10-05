@@ -82,7 +82,7 @@ namespace SkillBoxHomeworkFinance
 
                 for (int index = 1; index < records.Count; index++)
                 {
-                    if ((minProfits[yandex] > records[index].Profit) && (!records[index].BadMontn))
+                    if ((minProfits[yandex] > records[index].Profit) && (!records[index].BadMonth))
                     {
                         minProfits[yandex] = records[index].Profit;
                         minMonthes[yandex] = records[index].Month;
@@ -91,12 +91,12 @@ namespace SkillBoxHomeworkFinance
 
                 }
 
-                records[minMonthes[yandex] - 1].BadMontn = true;
+                records[minMonthes[yandex] - 1].BadMonth = true;
 
                 for (int index = 0; index < records.Count; index++)
                 {
-                    if ((minProfits[yandex] == records[index].Profit) && (minMonthes[yandex] != records[index].Month) && (!records[index].BadMontn))
-                        records[records[index].Month - 1].BadMontn = true;
+                    if ((minProfits[yandex] == records[index].Profit) && (minMonthes[yandex] != records[index].Month) && (!records[index].BadMonth))
+                        records[records[index].Month - 1].BadMonth = true;
                 }
                 #endregion
 
